@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x/icon" href="money-bill.png" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <header>
+      <h1>Currency Converter</h1>
+      <img src="money-bill.png" alt="money bill" id="bill-img">
+      <h3>By Brendon Tran</h3>
+    </header>
+    <div class="container">
+      <form name="main-form" action="" method="post">
+        
+        <label for="from"><strong>Convert from:</strong></label>
+        <input type="number" name="amount" id="amount" min="0.01" step="0.01" required>
+        <select name="from">
+          <option value="">[Select a currency]</option>
+          <option value="usd">USD - United States Dollar</option>
+          <option value="cad">CAD - Canadian Dollar</option>
+          <option value="mxn">MXN - Mexican Peso</option>
+          <option value="eur">EUR - Euro</option>
+          <option value="gbp">GBP - British Pound</option>
+          <option value="cny">CNY - Chinese Yuan</option>
+          <option value="jpy">JPY - Japanese Yen</option>
+          <option value="vnd">VND - Vietnamese Dong</option>
+        </select><br />
+
+        <label for="to"><strong>Convert to:</strong></label>
+        <select name="to">
+          <option value="">[Select a currency]</option>
+          <option value="usd">USD - United States Dollar</option>
+          <option value="cad">CAD - Canadian Dollar</option>
+          <option value="mxn">MXN - Mexican Peso</option>
+          <option value="eur">EUR - Euro</option>
+          <option value="gbp">GBP - British Pound</option>
+          <option value="cny">CNY - Chinese Yuan</option>
+          <option value="jpy">JPY - Japanese Yen</option>
+          <option value="vnd">VND - Vietnamese Dong</option>
+        </select><br />
+        <input type="submit" value="Convert" name="convert" id="convert-btn">
+      
+      </form>
+      <p id="result">[Result will go here]</p>
+    </div>
+    <footer>
+      <h3 id="disclaimer">DISCLAIMER: RESULTS ARE JUST ROUGH ESTIMATES!</h3>
+      <button id="dark-mode-btn">Dark Mode</button>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

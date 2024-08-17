@@ -1,0 +1,60 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  max-height: 100vh;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+#bill-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+input {
+  max-width: 75px;
+}
+
+select, #convert-btn {
+  margin: 5px;
+}
+
+select:hover, button:hover, #convert-btn:hover {
+  cursor: pointer;
+}
+
+#from-amount, #to-amount {
+  max-width: 100px;
+}
+
+#disclaimer {
+  color: red;
+  text-decoration: solid underline 2px red;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+}
+
+#dark-mode-btn {
+  float: right;
+  transform: translate(0px, 220px);
+}
