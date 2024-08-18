@@ -340,10 +340,25 @@ mainForm.onsubmit = function(event) {
   }
 
   console.log(`${fromOptionValue} --> ${toOptionValue}`);
-  let amount = document.getElementById('amount').value;
-  let firstResult = amount * convRate;
-  let roundedResult = firstResult.toFixed(2);
-  resultTxt.textContent = `${firstSymbol}${amount} ${fromOptionValue} --> ${finalSymbol}${roundedResult} ${toOptionValue}`;
+  let amount = document.getElementById('amount').value; // the amount that the user inputs
+  let firstResult = amount * convRate; // unrounded
+  let roundedResult = firstResult.toFixed(2); // rounded to two decimals
+  
+  let partsOne = amount.split('.');
+  let intPartOne = partsOne[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  if (partsOne[1] === undefined) {
+    partsOne[1] = '00';
+  }
+  
+  let amountResult = intPartOne + '.' + partsOne[1];
+
+  
+  
+  let partsTwo = roundedResult.split('.'); // splits the int and flt values
+  let intPartTwo = partsTwo[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","); // comma placer
+  let finalResult = intPartTwo + '.' + partsTwo[1]; // joins the int and flt together
+  
+  resultTxt.textContent = `${firstSymbol}${amountResult} ${fromOptionValue} --> ${finalSymbol}${finalResult} ${toOptionValue}`; // displays text to the html
 }
 
 // dark mode
